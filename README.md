@@ -13,6 +13,11 @@ To get up and running, just make sure you have the `sinatra` and `playnicely` ge
 
 You should be able to use the Javascript and CSS without too much trouble on your site, but you'll obviously want to incorporate the sample Ruby code into your own existing application.
 
+Compatibility
+-------------
+
+The JS and CSS has been tested and works in modern versions of Firefox, Safari, Chrome, and Internet Explorer 8+. It should in theory work with IE 7+ and older versions of Safari and Firefox, but I have not personally verified this.
+
 License
 -------
 
