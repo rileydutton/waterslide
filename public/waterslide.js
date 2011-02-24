@@ -29,10 +29,16 @@ $(function() {
 	
 	$("#waterslide_send").live("click", function(e) {
 		$("#waterslide_send").addClass("disabled").text("Sending...");
+		var description = $("#waterslide_long").val();
+		description = description + "\n\nLocation: " + window.location.href;
+		description = description + "\n\nBrowser: ";
+		jQuery.each(jQuery.browser, function(i, val) {
+			description = description + i + ": " + val + " ";
+		});
 		$.post(endpoint, {
 			type: $("#waterslide_type").val(),
 			short: $("#waterslide_short").val(),
-			long: $("#waterslide_long").val()
+			long: description
 		}, function(data) {
 			if(data == "success") {
 				$("#waterslide_dialog .content").html("<h1>Leave Feedback</h1><p>Thanks! Your feedback was sent successfully! We'll review it and take your suggestions into consideration.</p><p>Please note that we do not respond \
