@@ -1,9 +1,10 @@
 div#waterslide {
+	display: block;
 	position: fixed;
 	height: 30px;
 	width: 100px;
 	left: -36px;
-	top: 45%;
+	top: 0px;
 	background-color: #1f71b0;
 	color: white;
 	font-weight: bold;
@@ -98,5 +99,6 @@ div#waterslide_overlay {
 	left: 0px;
 	background-color: black;
 	opacity: 0.60;
+	filter: alpha(opacity = 60);
 	z-index: 10000;
 }

@@ -4,6 +4,7 @@ var endpoint = "/feedback";
 $(function() {
 
 	var button = $("<div id='waterslide'><div class='text'>feedback</div></div>").appendTo("body");
+	button.css("top", $(window).height() / 2 - 50 + "px");
 	
 	button.click(function(e) {
 		var overlay = $("<div id='waterslide_overlay'></div>").appendTo("body");
