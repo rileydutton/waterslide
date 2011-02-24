@@ -34,11 +34,32 @@ div#waterslide_dialog {
 	height: 400px;
 	z-index: 10001;
 	background-color: white;
-	border: 1px solid red;
+	border: 1px solid #D1D1D1;
 	font-family: Arial, sans-serif;
 	font-size: 14px;
 	padding: 10px;
 	line-height: 1.5em;
+}
+
+div#waterslide_dialog div.close {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background-color: white;
+	border: 3px solid black;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 15px;
+	color: black;
+	font-weight: bold;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+div#waterslide_dialog div.close:hover {
+	cursor: pointer;
 }
 
 div#waterslide_dialog label {

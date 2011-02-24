@@ -32,7 +32,8 @@ post '/feedback' do
   
   "success"
   
-  rescue PlayNicely::ClientError
+  rescue PlayNicely::ClientError => error
+    puts error
     "error"
   end
   
