@@ -14,7 +14,7 @@ $(function() {
 		
 		content.append("<h1>Leave Feedback</h1>");
 		content.append("<p>Please leave us feedback using the form below. Your feedback will be sent directly to our development team.</p>");
-		content.append("<label for='waterslide_type'>Type of feedback</label><select id='waterslide_type' name='type'><option value='bug'>Bug</option></select>");
+		content.append("<label for='waterslide_type'>Type of feedback</label><select id='waterslide_type' name='type'><option value='bug'>Bug</option><option value='idea'>Idea</option></select>");
 		content.append("<label for='waterslide_short'>Please provide a title for the feedback</label><input type='text' id='waterslide_short' name='short' />");
 		content.append("<label for='waterslide_long'>Please provide a detailed description of the idea or problem</label><textarea id='waterslide_long' name='long'></textarea>");
 		content.append("<button id='waterslide_send'>Send Feedback</button>");
