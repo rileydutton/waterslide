@@ -8,10 +8,6 @@ enable :logging
 post '/feedback' do
   
   client = PlayNicely::Client.new(PLAYNICELY_USERNAME, PLAYNICELY_PASSWORD)
-  if(!client)
-    "Error: Unable to connect to PlayNice.ly with the provided credentials. (Did you copy config.rb.example to config.rb and insert the correct values?)"
-    return
-  end
   
   if(params[:type] == 'bug')
     type = 'bug'
@@ -21,7 +17,12 @@ post '/feedback' do
     type = 'bug'
   end
   
-  item = client.create_item(1, {
+  begin
+  
+  item = client.create_item(PLAYNICELY_PROJECT_ID, {
+    :project_id => PLAYNICELY_PROJECT_ID,
+    :involved => [1426],
+    :responsible => 1426,
     :subject => params[:short],
     :body => params[:long],
     :tags => ["feedback"],
@@ -30,6 +31,10 @@ post '/feedback' do
   })
   
   "success"
+  
+  rescue PlayNicely::ClientError
+    "error"
+  end
   
 end
 
