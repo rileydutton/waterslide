@@ -1,3 +1,5 @@
+# Fill in the username and password, then launch the server and go to /setup_info if you need help with the other values.
 PLAYNICELY_USERNAME = ''
 PLAYNICELY_PASSWORD = ''
 PLAYNICELY_PROJECT_ID = ''
+PLAYNICELY_MILESTONE_ID = ''
