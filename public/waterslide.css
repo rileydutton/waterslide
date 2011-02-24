@@ -1,0 +1,81 @@
+div#waterslide {
+	position: fixed;
+	height: 30px;
+	width: 100px;
+	left: -36px;
+	top: 45%;
+	background-color: #1f71b0;
+	color: white;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);	
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	border: 1px solid black;
+}
+
+div#waterslide:hover {
+	cursor: pointer;
+	background-color: #2c94e4;
+}
+
+div#waterslide div.text {
+	padding-top: 5px;
+	text-align: center;
+}
+
+div#waterslide_dialog {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 380px;
+	height: 400px;
+	z-index: 10001;
+	background-color: white;
+	border: 1px solid red;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 10px;
+	line-height: 1.5em;
+}
+
+div#waterslide_dialog label {
+	display: block;
+	margin-bottom: 0.5em;
+	margin-top: 1.3em;
+}
+
+div#waterslide_dialog input {
+	width: 360px;
+}
+
+div#waterslide_dialog textarea {
+	width: 360px;
+	height: 75px;
+}
+
+div#waterslide_dialog button {
+	padding: 5px;
+	background-color: #1f71b0;
+	color: white;
+	font-weight: bold;
+	border: 1px solid #2c94e4;
+	margin-top: 10px;
+	float: right;
+	margin-right: 20px;
+}
+
+div#waterslide_dialog button.disabled {
+	background-color: #637f94;
+}
+
+div#waterslide_overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: black;
+	opacity: 0.60;
+	z-index: 10000;
+}
