@@ -3,9 +3,9 @@ var endpoint = "/feedback";
 
 $(function() {
 
-	var container = $("<div id='waterslide'><div class='text'>feedback</div></div>").appendTo("body");
+	var button = $("<div id='waterslide'><div class='text'>feedback</div></div>").appendTo("body");
 	
-	container.click(function() {
+	button.click(function(e) {
 		var overlay = $("<div id='waterslide_overlay'></div>").appendTo("body");
 		overlay.css("width", $(window).width() + "px").css("height", $(window).height() + "px");
 		var dialog = $("<div id='waterslide_dialog'><div class='close'>X</div><div class='content'></div></div>").appendTo("body");
@@ -18,9 +18,15 @@ $(function() {
 		content.append("<label for='waterslide_short'>Please provide a title for the feedback</label><input type='text' id='waterslide_short' name='short' />");
 		content.append("<label for='waterslide_long'>Please provide a detailed description of the idea or problem</label><textarea id='waterslide_long' name='long'></textarea>");
 		content.append("<button id='waterslide_send'>Send Feedback</button>");
+		
+		e.stopPropagation();
 	});
 	
-	$("#waterslide_send").live("click", function() {
+	$("#waterslide_dialog").live("click", function(e) {
+		e.stopPropagation();
+	});
+	
+	$("#waterslide_send").live("click", function(e) {
 		$("#waterslide_send").addClass("disabled").text("Sending...");
 		$.post(endpoint, {
 			type: $("#waterslide_type").val(),
@@ -37,9 +43,16 @@ $(function() {
 			}
 		});
 		
+		e.stopPropagation();
+		
 	});
 	
 	$("#waterslide_dialog .close").live("click", function() {
+		$("#waterslide_dialog").remove();
+		$("#waterslide_overlay").remove();
+	});
+	
+	$("body").live("click", function() {
 		$("#waterslide_dialog").remove();
 		$("#waterslide_overlay").remove();
 	});
