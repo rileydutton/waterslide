@@ -27,7 +27,7 @@ $(function() {
 			long: $("#waterslide_long").val()
 		}, function(data) {
 			if(data == "success") {
-				$("#waterslide_dialog").html("<h1>Leave Feedback</h1><p>Thanks! Your feedback was sent successfully! We'll review it and take your suggestions into consideration. Please note that we do not respond \
+				$("#waterslide_dialog").html("<h1>Leave Feedback</h1><p>Thanks! Your feedback was sent successfully! We'll review it and take your suggestions into consideration.</p><p>Please note that we do not respond \
 				individiually to all requests received via the feedback form. If you need immediate support, please email us at " + support_email + "</p>");
 			}
 			
