@@ -9,7 +9,7 @@ Waterslide provides a "feedback" button for your website, similar to those from 
 Setup
 -----
 
-To get up and running, just make sure you have the `sinatra` and `playnicely` gems installed. Then just run `ruby -rubygems app.rb` from the base directory. If you're using the Sinatra defaults, you should just be able to point your browser to `http://localhost:4567` to view the demo on your local computer. 
+To get up and running, just make sure you have the `sinatra` and `playnicely` gems installed. Copy `config.rb.example` to `config.rb`, and change the values therein. Then just run `ruby -rubygems app.rb` from the base directory. If you're using the Sinatra defaults, you should just be able to point your browser to `http://localhost:4567` to view the demo on your local computer. 
 
 You should be able to use the Javascript and CSS without too much trouble on your site, but you'll obviously want to incorporate the sample Ruby code into your own existing application.
 
