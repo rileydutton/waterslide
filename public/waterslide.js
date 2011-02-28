@@ -1,8 +1,8 @@
-var support_email = "support@yourdomain.com";
-var endpoint = "/feedback";
-
 $(function() {
-
+	
+	var support_email = "support@yourdomain.com";
+	var endpoint = "/feedback";
+	
 	var button = $("<div id='waterslide'><div class='text'>feedback</div></div>").appendTo("body");
 	button.css("top", $(window).height() / 2 - 50 + "px");
 	
@@ -36,9 +36,9 @@ $(function() {
 			description = description + i + ": " + val + " ";
 		});
 		$.post(endpoint, {
-			type: $("#waterslide_type").val(),
-			short: $("#waterslide_short").val(),
-			long: description
+			"type": $("#waterslide_type").val(),
+			"short": $("#waterslide_short").val(),
+			"long": description
 		}, function(data) {
 			if(data == "success") {
 				$("#waterslide_dialog .content").html("<h1>Leave Feedback</h1><p>Thanks! Your feedback was sent successfully! We'll review it and take your suggestions into consideration.</p><p>Please note that we do not respond \
