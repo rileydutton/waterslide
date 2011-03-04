@@ -25,6 +25,10 @@ post '/feedback' do
     params[:long] = ""
   end
   
+  if(params[:email] != "")
+    params[:long] = "From: #{params[:email]}\n\n#{params[:long]}"
+  end
+  
   begin
   
   item = client.create_item(PLAYNICELY_PROJECT_ID, {
@@ -42,8 +46,7 @@ post '/feedback' do
   "success"
   
   rescue PlayNicely::ClientError => error
-    puts error
-    "error"
+    error
   end
   
 end
